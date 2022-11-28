@@ -8,7 +8,7 @@ function Saveproduct(req, res) {
     if (err) res.send("something wet wrong or Already exist");
     else {
       res.render("index", {
-        Title: "",
+        Title: "",prods:""
       });
     }
   });
