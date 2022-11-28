@@ -24,4 +24,4 @@ router.post("/addedproduct", Saveproduct);
 //router.get("/getproductbyid/:id", Getproductbyid);
 router.get("/getproducts", Getallproducts);
 module.exports = router;
-router.get("/delete", deleteProduct);r
+router.get("/delete", deleteProduct);
