@@ -13,9 +13,7 @@ router.get("/addproduct", (req, res) => {
   res.render("add");
 });
 router.get("/edit/:id", editProductPage);
-router.get("/delete", (req, res) => {
-  res.render("delete");
-});
+
 router.post("/edit-data", (req, res) => {
   let bodyData = req.body;
   res.render("index");
