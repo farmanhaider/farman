@@ -36,6 +36,17 @@ function editProductPage(req, res, next) {
     })
     .catch((err) => console.log(err));
 }
+function deleteProduct(req, res, next) {
+  // Product.deleteOne({ _id: req.body.id }) //deleteOne mongodb
+  // Product.findByIdAndDelete(req.body.id) //findOneAndDelete
+  let pid = req.body.id;
+  proModel
+    .deleteOne(pid) //findAndModify
+    .then((result) => {
+      res.redirect("/getproducts");
+    })
+    .catch((err) => console.log(err));
+}
 function Getallproducts(req, res, next) {
   proModel
     .find()
@@ -50,4 +61,4 @@ function Getallproducts(req, res, next) {
     .catch((err) => console.log(err));
 }
 
-module.exports = { Saveproduct, Getallproducts, editProductPage };
+module.exports = { Saveproduct, Getallproducts, editProductPage, deleteProduct};
