@@ -3,6 +3,7 @@ const {
   Saveproduct,
   Getallproducts,
   editProductPage,
+  deleteProduct,
 } = require("./Controller/productcontroller");
 const router = express.Router();
 router.get("/", (req, res) => {
@@ -23,3 +24,4 @@ router.post("/addedproduct", Saveproduct);
 //router.get("/getproductbyid/:id", Getproductbyid);
 router.get("/getproducts", Getallproducts);
 module.exports = router;
+router.get("/delete", deleteProduct);r
